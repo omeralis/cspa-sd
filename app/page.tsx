@@ -1,4 +1,5 @@
 import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
 import Hero from "./components/sections/Hero";
 import Stats from "./components/sections/Stats";
 import Programs from "./components/sections/Programs";
@@ -18,6 +19,7 @@ export default function Home() {
       <About />
       <Pillars />
       <Contact />
+      <Footer />
       <ScrollToTop />
     </main>
   );

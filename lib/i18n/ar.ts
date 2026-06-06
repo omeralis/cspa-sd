@@ -79,4 +79,32 @@ export const ar: Translations = {
     button: "تواصل معنا",
   },
   scrollToTop: "العودة للأعلى",
+  footer: {
+    connect: "نتواصل",
+    services: "الخدمات",
+    quickLinks: "روابط سريعة",
+    importantLinks: "روابط هامة",
+    location: "السودان",
+    email: "info@cspasudan.org",
+    tagline:
+      "جمعية محترفي الأمن السيبراني — نبني سوداناً رقمياً آمناً ومرناً وسيادياً من خلال التعاون المهني والمعرفة والمرونة السيبرانية الوطنية.",
+    designedBy: "Designed by CSPA",
+    servicesItems: [
+      { label: "التوعية بالأمن السيبراني", href: "#programs" },
+      { label: "التطوير المهني", href: "#programs" },
+      { label: "الفعاليات", href: "#programs" },
+    ],
+    quickLinkItems: [
+      { label: "الرئيسية", href: "#hero" },
+      { label: "من نحن", href: "#about" },
+      { label: "الركائز", href: "#pillars" },
+      { label: "البرامج", href: "#programs" },
+    ],
+    importantLinkItems: [
+      {
+        label: "سفارة جمهورية السودان",
+        href: "https://www.mfa.gov.sd/",
+      },
+    ],
+  },
 };

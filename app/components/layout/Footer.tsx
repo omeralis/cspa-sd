@@ -1,0 +1,216 @@
+"use client";
+
+import Image from "next/image";
+import { useLanguage } from "../providers/LanguageProvider";
+
+const socialLinks = [
+  {
+    href: "https://chat.whatsapp.com/Hs0NDZ1QMiHGp5lDmsH7RE",
+    label: "WhatsApp",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+      </svg>
+    ),
+  },
+  {
+    href: "https://x.com/cspasudan",
+    label: "X",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+      </svg>
+    ),
+  },
+  {
+    href: "https://instagram.com/cspasudan/",
+    label: "Instagram",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+      </svg>
+    ),
+  },
+  {
+    href: "https://youtube.com/@cspasudan",
+    label: "YouTube",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+      </svg>
+    ),
+  },
+  {
+    href: "https://facebook.com/cspasudan",
+    label: "Facebook",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+      </svg>
+    ),
+  },
+  {
+    href: "https://tiktok.com/@cspasudan",
+    label: "TikTok",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+      </svg>
+    ),
+  },
+  {
+    href: "https://threads.com/@cspasudan",
+    label: "Threads",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12.186 0C8.74 0 8.333.015 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.015 15.259 0 12.186 0zm.062 4.983c.553 0 1.003.45 1.003 1.003v.062c2.682.12 4.738 1.043 6.013 2.718 1.275 1.675 1.713 3.998 1.3 6.825-.09.618-.22 1.22-.387 1.8-.167.58-.37 1.132-.605 1.65-.47 1.036-1.09 1.94-1.84 2.695-.75.755-1.654 1.375-2.69 1.845-.518.235-1.07.438-1.65.605-.58.167-1.182.297-1.8.387-2.827.413-5.15-.025-6.825-1.3-1.675-1.275-2.598-3.331-2.718-6.013h-.062c0-.553.45-1.003 1.003-1.003h.062c2.445.108 4.28.928 5.418 2.385 1.138 1.457 1.528 3.488 1.158 5.978-.062.425-.152.838-.268 1.235-.116.397-.258.778-.423 1.14-.33.725-.768 1.358-1.298 1.888-.53.53-1.163.968-1.888 1.298-.362.165-.743.307-1.14.423-.397.116-.81.206-1.235.268-2.49.37-4.521-.02-5.978-1.158-1.457-1.138-2.277-2.973-2.385-5.418V5.986c0-.553.45-1.003 1.003-1.003z" />
+      </svg>
+    ),
+  },
+];
+
+function LinkIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+      <path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" />
+      <path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" />
+    </svg>
+  );
+}
+
+function LocationIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+      <circle cx="12" cy="10" r="3" />
+    </svg>
+  );
+}
+
+function MailIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+      <path d="M22 6l-10 7L2 6" />
+    </svg>
+  );
+}
+
+function FooterColumn({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="footer-col">
+      <h3 className="footer-col-title">{title}</h3>
+      {children}
+    </div>
+  );
+}
+
+function Footer() {
+  const { t } = useLanguage();
+  const year = new Date().getFullYear();
+ 
+  return (
+    <footer className="site-footer">
+      <div className="footer-main">
+        <div className="footer-columns">
+          <FooterColumn title={t.footer.importantLinks}>
+            <ul className="footer-links">
+              {t.footer.importantLinkItems.map((item) => (
+                <li key={item.href}>
+                  <a href={item.href} target="_blank" rel="noopener noreferrer">
+                    <LinkIcon />
+                    <span>{item.label}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </FooterColumn>
+
+          <FooterColumn title={t.footer.quickLinks}>
+            <ul className="footer-links">
+              {t.footer.quickLinkItems.map((item) => (
+                <li key={item.href}>
+                  <a href={item.href}>
+                    <LinkIcon />
+                    <span>{item.label}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </FooterColumn>
+
+          <FooterColumn title={t.footer.services}>
+            <ul className="footer-links">
+              {t.footer.servicesItems.map((item) => (
+                <li key={item.label}>
+                  <a href={item.href}>
+                    <LinkIcon />
+                    <span>{item.label}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </FooterColumn>
+
+          <FooterColumn title={t.footer.connect}>
+            <ul className="footer-contact">
+              <li>
+                <LocationIcon />
+                <span>{t.footer.location}</span>
+              </li>
+              <li>
+                <MailIcon />
+                <a href={`mailto:${t.footer.email}`}>{t.footer.email}</a>
+              </li>
+            </ul>
+            <div className="footer-social">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.href}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className="footer-social-btn"
+                >
+                  {social.icon}
+                </a>
+              ))}
+            </div>
+          </FooterColumn>
+        </div>
+
+        <div className="footer-brand">
+          <div className="footer-brand-logo">
+            <Image
+              src="/images/SCSA_Logo_Icon2.png"
+              alt="CSPA"
+              width={120}
+              height={120}
+              className="footer-logo-img"
+            />
+            <span className="footer-brand-name">CSPA</span>
+          </div>
+          <p className="footer-brand-text">{t.footer.tagline}</p>
+        </div>
+      </div>
+
+      <div className="footer-bottom">
+        <span className="footer-designed">{t.footer.designedBy}</span>
+        <div className="footer-copyright">
+          <span>CSPA</span>
+          <span className="footer-copyright-line" aria-hidden="true" />
+          <span>{year}</span>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+export default Footer;

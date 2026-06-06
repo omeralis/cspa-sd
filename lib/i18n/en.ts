@@ -79,4 +79,32 @@ export const en: Translations = {
     button: "Contact Us",
   },
   scrollToTop: "Scroll to top",
+  footer: {
+    connect: "Connect",
+    services: "Services",
+    quickLinks: "Quick Links",
+    importantLinks: "Important Links",
+    location: "Sudan",
+    email: "info@cspasudan.org",
+    tagline:
+      "Cyber Security Professional Association — forging a secure, resilient, and sovereign digital Sudan through professional collaboration, knowledge, and national cyber resilience.",
+    designedBy: "Designed by CSPA",
+    servicesItems: [
+      { label: "Cybersecurity Awareness", href: "#programs" },
+      { label: "Professional Development", href: "#programs" },
+      { label: "Events", href: "#programs" },
+    ],
+    quickLinkItems: [
+      { label: "Home", href: "#hero" },
+      { label: "About", href: "#about" },
+      { label: "Pillars", href: "#pillars" },
+      { label: "Programs", href: "#programs" },
+    ],
+    importantLinkItems: [
+      {
+        label: "Embassy of the Republic of Sudan",
+        href: "https://www.mfa.gov.sd/",
+      },
+    ],
+  },
 };

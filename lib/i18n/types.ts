@@ -50,4 +50,17 @@ export type Translations = {
     button: string;
   };
   scrollToTop: string;
+  footer: {
+    connect: string;
+    services: string;
+    quickLinks: string;
+    importantLinks: string;
+    location: string;
+    email: string;
+    tagline: string;
+    designedBy: string;
+    servicesItems: { label: string; href: string }[];
+    quickLinkItems: { label: string; href: string }[];
+    importantLinkItems: { label: string; href: string }[];
+  };
 };
