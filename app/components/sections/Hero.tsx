@@ -15,8 +15,10 @@ function Hero() {
           <h1>{t.hero.title}</h1>
           <p>{t.hero.description}</p>
 
-          <div className="heroActions">
-            <a href="#about">{t.hero.learnMore}</a>
+          <div className="heroActions">  
+            <button> 
+            <a   href="#about">{t.hero.learnMore}</a>
+            </button>
           </div>
         </div>
 

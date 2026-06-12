@@ -178,6 +178,33 @@ nav {
   gap: 32px;
 }
 
+.borderHeader {
+  background: var(--panel);
+  color: #fff;
+  z-index: 5;
+  border-radius: 28px;
+  width: 70%;
+  margin: auto;
+  padding: 21px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+[data-theme="dark"] .borderHeader {
+  background: var(--cyan);
+  color: var(--navy);
+}
+
+[data-theme="dark"] .borderHeader a {
+  color: var(--navy);
+}
+
+[data-theme="dark"] .borderHeader a:hover {
+  color: var(--navy);
+  opacity: 0.75;
+}
+
 nav a {
   color: var(--cyan);
   text-decoration: none;
@@ -191,7 +218,7 @@ nav a:hover {
 
 .loginBtn,
 .joinBtn,
-.heroActions a,
+.heroActions button,
 .cta button,
 .cta a {
   border: 0;
@@ -247,13 +274,24 @@ nav a:hover {
   margin-top: 35px;
 }
 
-.heroActions a,
+.heroActions a {
+  color: var(--blue);
+  font-weight: 800;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.heroActions .moreInfo {
+  color: var(--cyan);
+}
+
+.heroActions button,
 .loginBtn,
 .joinBtn {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.heroActions a:hover,
+.heroActions button:hover,
 .loginBtn:hover,
 .joinBtn:hover {
   transform: translateY(-2px);

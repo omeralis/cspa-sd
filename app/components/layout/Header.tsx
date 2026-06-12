@@ -20,7 +20,7 @@ function Header() {
         <span>CSPA</span>
       </div>
 
-      <nav>
+      <nav className="borderHeader">
         <a href="#hero">{t.nav.home}</a>
         <a href="#about">{t.nav.about}</a>
         <a href="#pillars">{t.nav.pillars}</a>
