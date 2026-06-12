@@ -397,7 +397,7 @@ nav a:hover {
   content: "• ";
 }
 
-.servicePoints li + li {
+.servicePoints li+li {
   margin-top: 8px;
 }
 
