@@ -10,6 +10,8 @@ export const ar: Translations = {
     lang: "EN",
     themeDark: "الوضع الداكن",
     themeLight: "الوضع الفاتح",
+    menuOpen: "فتح القائمة",
+    menuClose: "إغلاق القائمة",
   },
   hero: {
     eyebrow: "رابطة محترفي الأمن السيبراني – السودان",

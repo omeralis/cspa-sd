@@ -10,6 +10,8 @@ export const en: Translations = {
     lang: "العربية",
     themeDark: "Dark mode",
     themeLight: "Light mode",
+    menuOpen: "Open menu",
+    menuClose: "Close menu",
   },
   hero: {
     eyebrow: "Cyber Security Professional Association CSPA – Sudan",

@@ -1,12 +1,24 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
 import { useLanguage } from "../providers/LanguageProvider";
 import { useTheme } from "../providers/ThemeProvider";
+
+const navLinks = [
+  { href: "#hero", key: "home" as const },
+  { href: "#about", key: "about" as const },
+  { href: "#pillars", key: "pillars" as const },
+  { href: "#programs", key: "programs" as const },
+  { href: "#contact", key: "contact" as const },
+];
 
 function Header() {
   const { t, toggleLocale } = useLanguage();
   const { theme, toggleTheme } = useTheme();
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <header className="navbar">
@@ -20,12 +32,34 @@ function Header() {
         <span>CSPA</span>
       </div>
 
-      <nav className="borderHeader">
-        <a href="#hero">{t.nav.home}</a>
-        <a href="#about">{t.nav.about}</a>
-        <a href="#pillars">{t.nav.pillars}</a>
-        <a href="#programs">{t.nav.programs}</a>
-        <a href="#contact">{t.nav.contact}</a>
+      <button
+        type="button"
+        className="menuBtn"
+        onClick={() => setMenuOpen((open) => !open)}
+        aria-expanded={menuOpen}
+        aria-controls="main-nav"
+        aria-label={menuOpen ? t.nav.menuClose : t.nav.menuOpen}
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+          {menuOpen ? (
+            <path d="M6 6l12 12M18 6L6 18" />
+          ) : (
+            <>
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </>
+          )}
+        </svg>
+      </button>
+
+      <nav
+        id="main-nav"
+        className={`borderHeader${menuOpen ? " borderHeader--open" : ""}`}
+      >
+        {navLinks.map(({ href, key }) => (
+          <a key={key} href={href} onClick={closeMenu}>
+            {t.nav[key]}
+          </a>
+        ))}
       </nav>
 
       <div className="navbarActions">

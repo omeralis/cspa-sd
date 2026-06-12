@@ -22,6 +22,8 @@ export type Translations = {
     lang: string;
     themeDark: string;
     themeLight: string;
+    menuOpen: string;
+    menuClose: string;
   };
   hero: {
     eyebrow: string;
