@@ -10,16 +10,20 @@ function Stats() {
     <div>
       <section className="stats">
         <div>
-          <strong>3</strong>
-          <span>{t.stats.community}</span>
+          <strong>380+</strong>
+          <span>{t.stats.professionalMembers}</span>
         </div>
         <div>
-          <strong>1</strong>
-          <span>{t.stats.events}</span>
+          <strong>12+</strong>
+          <span>{t.stats.eventsWorkshops}</span>
         </div>
         <div>
-          <strong>8</strong>
-          <span>{t.stats.partnerships}</span>
+          <strong>8+</strong>
+          <span>{t.stats.strategicPartnerships}</span>
+        </div>
+        <div> 
+          <strong>10+</strong>
+          <span>{t.stats.awarenessCampaigns}</span>
         </div>
       </section>
     </div>

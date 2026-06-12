@@ -10,22 +10,22 @@ export const en: Translations = {
     lang: "عربي",
   },
   hero: {
-    eyebrow: "Cyber Security Professional Association",
+    eyebrow: "Cyber Security Professional Association CSPA – Sudan",
     title: "The Architecture of Safety",
-    description:
-      "Forging a secure, resilient, and sovereign digital Sudan. CSPA represents cyber professionals committed to protection, trust, and digital national resilience.",
+    description: "We build a secure, resilient, and sovereign digital Sudan. We bring together a community of cybersecurity professionals committed to enhancing protection, building trust, and achieving digital national resilience in facing modern challenges.",
     join: "Join the Community",
     learnMore: "Learn More",
     imageAlt: "CSPA Identity",
   },
   stats: {
-    community: "CSPA Community",
-    events: "Events",
-    partnerships: "Partnerships",
+    professionalMembers: "Professional Members",
+    eventsWorkshops: "Events & Workshops",
+    strategicPartnerships: "Strategic Partnerships",
+    awarenessCampaigns: "Awareness Campaigns", 
   },
   programs: {
     label: "What We Do",
-    title: "Building cyber capacity through knowledge and collaboration",
+    title: "Building the National Cybersecurity Capability through Knowledge and Collaboration",
     items: [
       {
         title: "Cybersecurity Awareness",

@@ -29,9 +29,10 @@ export type Translations = {
     imageAlt: string;
   };
   stats: {
-    community: string;
-    events: string;
-    partnerships: string;
+    professionalMembers: string;
+    eventsWorkshops: string;
+    strategicPartnerships: string;
+    awarenessCampaigns: string; 
   };
   programs: {
     label: string;
