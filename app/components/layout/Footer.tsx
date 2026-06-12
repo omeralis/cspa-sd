@@ -211,7 +211,9 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <span className="footer-designed">{t.footer.designedBy}</span>
+        <span className="footer-designed">{t.footer.designedBy}
+        <a href="https://omerali.dev/">Omer Ali</a>
+        </span>
         <div className="footer-copyright">
           <span>CSPA</span>
           <span className="footer-copyright-line" aria-hidden="true" />

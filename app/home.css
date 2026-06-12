@@ -303,7 +303,7 @@ nav a:hover {
 }
 
 .heroActions a {
-  color: var(--blue);
+  /* color: var(--blue); */
   font-weight: 800;
   text-decoration: none;
   transition: color 0.2s ease;

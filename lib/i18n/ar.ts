@@ -118,7 +118,7 @@ export const ar: Translations = {
     email: "info@cspa.sd",
     tagline:
       "رابطة محترفي الأمن السيبراني — نبني سوداناً رقمياً آمناً ومرناً وسيادياً من خلال التعاون المهني والمعرفة والمرونة السيبرانية الوطنية.",
-    designedBy: "تصميم بواسطة CSPA",
+    designedBy: "تصميم بواسطة ",
     servicesItems: [
       { label: "التوعية بالأمن السيبراني", href: "#programs" },
       { label: "التطوير المهني", href: "#programs" },

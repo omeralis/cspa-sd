@@ -118,7 +118,7 @@ export const en: Translations = {
     email: "info@cspa.sd",
     tagline:
       "Cyber Security Professional Association — forging a secure, resilient, and sovereign digital Sudan through professional collaboration, knowledge, and national cyber resilience.",
-    designedBy: "Designed by CSPA",
+    designedBy: "Designed by ",
     servicesItems: [
       { label: "Cybersecurity Awareness", href: "#programs" },
       { label: "Professional Development", href: "#programs" },
