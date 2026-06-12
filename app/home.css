@@ -191,7 +191,7 @@ nav a:hover {
 
 .loginBtn,
 .joinBtn,
-.heroActions button,
+.heroActions a,
 .cta button,
 .cta a {
   border: 0;
@@ -247,24 +247,13 @@ nav a:hover {
   margin-top: 35px;
 }
 
-.heroActions a {
-  color: var(--blue);
-  font-weight: 800;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.heroActions a:hover {
-  color: var(--cyan);
-}
-
-.heroActions button,
+.heroActions a,
 .loginBtn,
 .joinBtn {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.heroActions button:hover,
+.heroActions a:hover,
 .loginBtn:hover,
 .joinBtn:hover {
   transform: translateY(-2px);

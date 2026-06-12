@@ -16,11 +16,7 @@ function Hero() {
           <p>{t.hero.description}</p>
 
           <div className="heroActions">
-            {/* <button>{t.hero.join}</button> */}
-            <button>
             <a href="#about">{t.hero.learnMore}</a>
-            </button>
-            
           </div>
         </div>
 
