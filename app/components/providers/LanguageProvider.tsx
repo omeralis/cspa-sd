@@ -22,15 +22,21 @@ type LanguageContextValue = {
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>("en");
+function readStoredLocale(): Locale {
+  if (typeof window === "undefined") return "ar";
 
-  useEffect(() => {
+  try {
     const stored = localStorage.getItem(STORAGE_KEY) as Locale | null;
-    if (stored === "en" || stored === "ar") {
-      setLocaleState(stored);
-    }
-  }, []);
+    if (stored === "en" || stored === "ar") return stored;
+  } catch {
+    // ignore storage errors
+  }
+
+  return "ar";
+}
+
+export function LanguageProvider({ children }: { children: ReactNode }) {
+  const [locale, setLocaleState] = useState<Locale>(readStoredLocale);
 
   useEffect(() => {
     const dir = locale === "ar" ? "rtl" : "ltr";

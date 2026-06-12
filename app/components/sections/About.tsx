@@ -9,11 +9,8 @@ function About() {
   return (
     <div>
       <section id="about" className="about">
-        <div>
-          <span className="sectionLabel">{t.about.label}</span>
-          <h2>{t.about.title}</h2>
-        </div>
-
+        <span className="sectionLabel">{t.about.label}</span>
+        <h2>{t.about.title}</h2>
         <p>{t.about.description}</p>
       </section>
     </div>

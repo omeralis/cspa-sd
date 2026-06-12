@@ -3,6 +3,7 @@ export type Locale = "en" | "ar";
 export type ServiceItem = {
   title: string;
   description: string;
+  points: string[];
 };
 
 export type PillarItem = {
@@ -19,6 +20,8 @@ export type Translations = {
     programs: string;
     contact: string;
     lang: string;
+    themeDark: string;
+    themeLight: string;
   };
   hero: {
     eyebrow: string;
@@ -44,11 +47,16 @@ export type Translations = {
     title: string;
     description: string;
   };
-  pillars: PillarItem[];
+  pillars: {
+    label: string;
+    title: string;
+    items: PillarItem[];
+  };
   contact: {
     title: string;
     description: string;
     button: string;
+    email: string;
   };
   scrollToTop: string;
   footer: {

@@ -11,7 +11,7 @@ function Contact() {
       <section className="cta" id="contact">
         <h2>{t.contact.title}</h2>
         <p>{t.contact.description}</p>
-        <button>{t.contact.button}</button>
+        <a href={`mailto:${t.contact.email}`}>{t.contact.button}</a>
       </section>
     </div>
   );

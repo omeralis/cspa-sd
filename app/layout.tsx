@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cairo, Geist, Geist_Mono } from "next/font/google";
 import { LanguageProvider } from "./components/providers/LanguageProvider";
+import { ThemeProvider } from "./components/providers/ThemeProvider";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -30,13 +31,20 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
-      dir="ltr"
+      lang="ar"
+      dir="rtl"
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} ${cairo.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <LanguageProvider>{children}</LanguageProvider>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem("cspa-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t);var l=localStorage.getItem("cspa-locale");if(l==="en"||l==="ar"){document.documentElement.lang=l;document.documentElement.dir=l==="ar"?"rtl":"ltr";}}catch(e){}})();`,
+          }}
+        />
+        <ThemeProvider>
+          <LanguageProvider>{children}</LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
